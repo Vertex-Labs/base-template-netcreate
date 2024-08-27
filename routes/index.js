@@ -32,7 +32,8 @@ const ncConfig = {
   uaddr: process.env.WSG_GATEWAY,
   uport: undefined,
   wss: true,
-  preamble: '{"action":"join-network"}'
+  preamble: '{"action":"join-network"}',
+  heartbeat: false
 };
 
 router.get('/', (req, res, next) => {
