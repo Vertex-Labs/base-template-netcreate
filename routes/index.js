@@ -21,7 +21,7 @@ const router = Router()
 */
 
 const gateway = process.env.WSG_GATEWAY 
-  ? process.env.wss 
+  ? process.env.WSG_GATEWAY 
   : 'tubfgw8dhf.execute-api.us-east-1.amazonaws.com/production/';
 
 const ncConfig = {
