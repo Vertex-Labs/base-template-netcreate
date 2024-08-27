@@ -20,6 +20,10 @@ const router = Router()
     };
 */
 
+const gateway = process.env.WSG_GATEWAY 
+  ? process.env.wss 
+  : 'tubfgw8dhf.execute-api.us-east-1.amazonaws.com/production/';
+
 const ncConfig = {
   // Client
   ip: '127.0.0.1',
@@ -29,7 +33,7 @@ const ncConfig = {
   hostip: '127.0.0.1',
   ustart: undefined,
   // Socket
-  uaddr: process.env.WSG_GATEWAY,
+  uaddr: gateway,
   uport: undefined,
   wss: true,
   preamble: '{"action":"join-network"}',
