@@ -45,4 +45,12 @@ router.get('/', (req, res, next) => {
   res.render(template, ncConfig)
 })
 
+router.get('/ursys', (req, res, next) => {
+  res.json({
+    type: "netcreate",
+    version: "0.0.0.0"
+  });
+  res.sendStatus(200);
+})
+
 module.exports = router
